@@ -7,12 +7,16 @@ mkdir Takumar
 
 cp Credits.rtf Takumar/
 
+gcc  -O3 -prebind -mmacosx-version-min=11.0 \
+  -o sleepwatcher sleepwatcher_2.2.1/sources/sleepwatcher.c \
+  -framework IOKit -framework CoreFoundation
+
 platypus \
   --name Takumar \
   --interface-type 'None' \
   --app-icon Camera_31090.icns \
   --interpreter /usr/bin/perl \
-  --app-version 0.01 \
+  --app-version 1.00 \
   --author "Beat Rubischon" \
   --bundled-file Credits.rtf \
   --bundled-file Pictures \
