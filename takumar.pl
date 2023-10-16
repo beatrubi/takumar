@@ -2,7 +2,7 @@
 #
 # Display the picture of the day
 #
-# Version 1.0.1 (C) 9.2023 by Beat Rubischon <beat@0x1b.ch>
+# Version 1.0.2 (C) 9.2023 by Beat Rubischon <beat@0x1b.ch>
 #
 # This program is distributed in the hope that it will be useful,
 # but WITHOUT ANY WARRANTY; without even the implied warranty of
@@ -451,6 +451,7 @@ while(1) {
     sysread(WATCH, $byte, 1);
     if ($debug) {
       print LOG "...returned from suspend...\n";
+      sleep(5);
     }
   }
 }
